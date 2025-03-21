@@ -1,0 +1,7 @@
+{
+  "m2m:ae": {
+    "rn": "GatewayMN",
+    "api": "app-sensor",
+    "rr": true
+  }
+}

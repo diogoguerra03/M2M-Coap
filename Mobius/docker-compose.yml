@@ -1,0 +1,20 @@
+version: '3'
+services:
+  mobius:
+    image: iotketi/mobius:latest
+    container_name: mobius
+    restart: always
+    ports:
+      - "7579:7579"
+      - "5683:5683/udp"
+    environment:
+      - MOBIUS_MONGO_HOST=mongo
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:4.2
+    container_name: mongo
+    restart: always
+    ports:
+      - "27017:27017"
